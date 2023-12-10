@@ -4,23 +4,23 @@
 using namespace std;
 
 string init_k(string k) {
-
-}
-
-string init_d(string d) {
 	bool check = false;
-	cin >> d;
-	string nums[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-	for (string num : nums) {
-		if (num == d) {
-			check = true;
+	cin >> k;
+	string nums = "0123456789";
+	for (int i = 0; i < k.length(); i++) {
+		if (nums.find(k[i]) != string::npos) {
+			check = false;
 		}
 	}
 	if (check) {
-		return d;
+		return k;
 	}
 	cout << "ERROR";
 	return;
+}
+
+string init_d(string d) {
+
 }
 
 int k_plus_d(string k, string d) {
